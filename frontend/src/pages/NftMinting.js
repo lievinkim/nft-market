@@ -10,7 +10,7 @@ export default function NftMintingPage() {
   function mintNftHandler() {
     setIsLoading(true);
 
-    const url = "http://localhost:8000/nfts/mint/";
+    const url = "http://15.165.75.155:8000/nfts/mint/";
     const owner = "1234";
 
     fetch(url + owner, {

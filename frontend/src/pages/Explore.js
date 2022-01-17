@@ -9,7 +9,7 @@ function ExplorePage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:8000/nfts", {
+    fetch("http://15.165.75.155:8000/nfts", {
       headers: {
         "Content-Type": "application/json",
       },
