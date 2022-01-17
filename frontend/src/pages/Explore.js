@@ -41,12 +41,28 @@ function ExplorePage() {
     );
   }
 
+  let content;
+
+  if (isLoading) {
+    content = (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    );
+  } else if (loadedNfts.length === 0) {
+    content = (
+      <div className="cards">There is no NFTs minted. Start minting some?</div>
+    );
+  } else {
+    content = <Cards nfts={loadedNfts} />;
+  }
+
   return (
     <section>
       <div>
         <h1>Explore</h1>
       </div>
-      <Cards nfts={loadedNfts} />
+      {content}
     </section>
   );
 }

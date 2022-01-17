@@ -9,6 +9,7 @@ function Cards(props) {
         <div className="cards__wrapper">
           {props.nfts.map((nft) => (
             <CardItem
+              key={nft.key}
               src="https://shop.kosangas.dk/images/products//defaultproduct.gif"
               sheetId={nft.sheetId}
               name={nft.name}

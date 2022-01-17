@@ -22,6 +22,10 @@ function CardItem(props) {
     }
   }
 
+  let style = {
+    lineBreak: "anywhere",
+  };
+
   return (
     <div className="cards__item">
       <div className="cards__item__link">
@@ -30,17 +34,13 @@ function CardItem(props) {
             className="cards__item__pic-wrap"
             data-category={props.sheetId}
           >
-            <img
-              className="cards__item__img"
-              alt="Item Image"
-              src={props.src}
-            />
+            <img className="cards__item__img" alt="Item" src={props.src} />
           </figure>
           <div className="cards__item__info">
             <h5 className="cards__item__text">{props.name}</h5>
             <h5 className="cards__item__text">{props.nameEng}</h5>
             <p>희귀도 : {props.rarity}</p>
-            <p>소유자 주소 : {props.owner}</p>
+            <p style={style}>소유자 주소 : {props.owner}</p>
           </div>
         </Link>
         <Button
@@ -49,7 +49,7 @@ function CardItem(props) {
           buttonSize="btn--add"
           onClick={toggleMyNftStatusHandler}
         >
-          {itemIsMyNft ? "Remove from My NFT" : "To My NFT"}
+          {itemIsMyNft ? "Sell NFT" : "Buy NFT"}
         </Button>
       </div>
     </div>
