@@ -37,9 +37,8 @@ function CardItem(props) {
             />
           </figure>
           <div className="cards__item__info">
-            <h5 className="cards__item__text">
-              {props.name + " / " + props.nameEng}
-            </h5>
+            <h5 className="cards__item__text">{props.name}</h5>
+            <h5 className="cards__item__text">{props.nameEng}</h5>
             <p>희귀도 : {props.rarity}</p>
             <p>소유자 주소 : {props.owner}</p>
           </div>

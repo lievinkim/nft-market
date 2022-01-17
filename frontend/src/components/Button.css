@@ -56,3 +56,12 @@
   color: #242424;
   transition: 250ms;
 }
+
+@media screen and (max-width: 960px) {
+  .btn--large:hover,
+  .btn--medium:hover,
+  .btn--add:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+}
