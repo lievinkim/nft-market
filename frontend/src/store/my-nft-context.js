@@ -49,11 +49,9 @@ export function MyNftContextProvider(props) {
   }
 
   function initHandler() {
+    setUserAddress(null);
     setUserMyNfts((prevUserMyNfts) => {
-      prevUserMyNfts = [];
-    });
-    setUserAddress((prevUserAddress) => {
-      prevUserAddress = null;
+      return (prevUserMyNfts = []);
     });
   }
 
